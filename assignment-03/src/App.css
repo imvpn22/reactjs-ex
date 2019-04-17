@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+/* Style for nav */
+.nav-link {
+  color: #999;
+}
+.active {
+  color: #444;
+  background-color: #eee;
+}
+
 /* Style for table */
 .table-box {
   display: flex;
@@ -24,6 +33,6 @@ table {
 
 th,
 td {
-  padding: .5em 1em;
+  padding: 7px 14px !important;
 }
 

@@ -6,7 +6,7 @@ class ProductsList extends Component {
     return (
       <div className="table-box">
         <h3> List of product </h3>
-        <table>
+        <table className='table table-bordered'>
           <thead>
             <tr>
               <th> ID </th>
@@ -16,11 +16,17 @@ class ProductsList extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.products.map( product => (
+            {this.props.products && this.props.products.length > 0
+              ? this.props.products.map( product => (
               <Product
               key={product.id}
               product={product}/>
-            ))}
+            ))
+              :
+              <tr>
+                <td > Nothing to show </td>
+              </tr>
+            }
           </tbody>
         </table>
 
